@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Peru</title>
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/glide.theme.min.css">
+    <link rel="stylesheet" href="/css/glide.core.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <!-- ScrollReveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Glide.js CSS -->
+    <link rel="stylesheet" href="/css/glide.core.min.css">
+    <link rel="stylesheet" href="/css/glide.theme.css">
+
+    <!-- Glide.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+</head>
+
+<body>
+
+    <!-- The navigation and hero Section -->
+    <main>
+        <nav class="nav_container">
+            <figure class="logo">
+                <img src="./assets/peru-symbol-white.png" alt="Peru Logo">
+            </figure>
+            <div class="menu">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="menu-desk">
+                <ul>
+                    <li>About</li>
+                    <li>Must-Visit Destinations</li>
+                    <li>Travel Tips</li>
+                    <li>Interactive Map</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="image_hero">
+            <div class="ih_text-container">
+                <h1>Discover the Magic of <br><span id="peru">Peru</span></h1>
+                <p>Explore breathtaking landscapes, ancient history, and vibrant culture in one of the world’s most fascinating destinations.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Section -->
+    <section class="about_container">
+        <div class="a_text-container">
+            <h2 class="title">About</h2>
+            <p>Peru is a land of wonders, home to the legendary Machu Picchu, the vast Amazon rainforest, and the stunning Andes mountains. From ancient Inca civilization to vibrant modern cities, Peru offers a unique blend of history, adventure, and rich traditions.</p>
+        </div>
+    </section>
+
+    <!-- Here is the Must-Visit Destinations Section -->
+    <section class="visit-container">
+        <div class="v-text-container">
+            <h2 class="title">Must-Visit Destinations</h2>
+        </div>
+
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="image-container" id="machu">
+                        <img src="./assets/macchu-picchu-1163479_1920.jpg" alt="Machu Picchu">
+                        <div class="text-overlay">
+                            <h2>Machu Picchu</h2>
+                            <p>The iconic Incan citadel, a true wonder of the world.</p>
+                        </div>
+                    </li>
+                    <li class="image-container" id="lima">
+                        <img src="./assets/lima-city.jpg" alt="Lima City">
+                        <div class="text-overlay">
+                            <h2>Lima</h2>
+                            <p>A coastal capital filled with history, food, and culture.</p>
+                        </div>
+                    </li>
+                    <li class="image-container" id="cuzco">
+                        <img src="./assets/cusco-1631689_1920.jpg" alt="Cusco">
+                        <div class="text-overlay">
+                            <h2>Cusco</h2>
+                            <p>The gateway to the Sacred Valley and Incan heritage.</p>
+                        </div>
+                    </li>
+                    <li class="image-container" id="nazca">
+                        <img src="./assets/nazca.jpg" alt="Nazca">
+                        <div class="text-overlay">
+                            <h2>Nazca</h2>
+                            <p>Mysterious lines drawn in the desert, still unexplained.</p>
+                        </div>
+                    </li>
+                    <li class="image-container" id="amazon">
+                        <img src="./assets/amazon-7344034_1920.jpg" alt="Amazon Forest">
+                        <div class="text-overlay">
+                            <h2>The Amazon</h2>
+                            <p>A lush rainforest teeming with wildlife and adventure.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Navigation buttons (only appear on desktop) -->
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#10094;</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section class="tips-container">
+        <div class="t-text-container">
+            <h2 class="title">Travel Tips</h2>
+        </div>
+
+        <article class="card-container">
+            <div class="card">
+                <img src="./assets/lake-3970396_1920.jpg" alt="Lake">
+                <div class="card-content">
+                    <h2><span class="icon">📅</span> <b>Best Time to Visit:</b></h2>
+                    <p>May to September for dry weather and clear skies.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./assets/pisco-3679056_1920.jpg" alt="Pisco Sour being prepared">
+                <div class="card-content">
+                    <h2><span class="icon">🍽️</span> <b>Must-Try Food:</b></h2>
+                    <p>Ceviche, Lomo Saltado, and the famous Pisco Sour.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./assets/meg-von-haartman-xCAhpcy8qjE-unsplash.jpg" alt="Passport">
+                <div class="card-content">
+                    <h2><span class="icon">🎟️</span> <b>Entry Requirements:</b></h2>
+                    <p>Most visitors need a passport, but no visa for short stays.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./assets/peru-2287008_1920.jpg" alt="Altitude">
+                <div class="card-content">
+                    <h2><span class="icon">⚠️</span> <b>Altitude Tips:</b></h2>
+                    <p>Drink coca tea and take it slow in high-altitude areas like Cusco.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="map-container">
+        <div class="m-text-container">
+            <h2 class="title">Interactive Map</h2>
+        </div>
+        <div id="map"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <div class="c-text-container">
+            <h2 class="title">Ready to explore Peru?</h2>
+            <p>Get in touch with us for travel guides, tour recommendations, and personalized itineraries.</p>
+        </div>
+
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-container">
+        <div class="i-text-container" id="img01">
+            <h2>@Peru</h2>
+        </div>
+
+        <div class="instagram-desk">
+            <div class="div2">
+                <img src="./assets/alpaca-3416844_1920.jpg" alt="Alpaca">
+            </div>
+            <div class="div3">
+                <img src="./assets/eduardo-garcia-cRHwRTXodcw-unsplash.jpg" alt="Eduardo Garcia">
+            </div>
+            <div class="div4">
+                <img src="./assets/alexander-schimmeck-R5IxlpyynrI-unsplash.jpg" alt="Alexander Schimmeck">
+            </div>
+            <div class="div5">
+                <img src="./assets/alpaca-4357188_1920.jpg" alt="Alpaca">
+            </div>
+            <div class="div6">
+                <img src="./assets/arequipa-4484913_1920.jpg" alt="Arequipa">
+            </div>
+            <div class="div7">
+                <img src="./assets/arequipa-4484913_1920.jpg" alt="Arequipa">
+            </div>
+            <div class="div8">
+                <img src="./assets/carnival-319515_1920.jpg" alt="Carnival">
+            </div>
+            <div class="div9">
+                <img src="./assets/christ-1809774_1920.jpg" alt="Christ">
+            </div>
+            <div class="div10">
+                <img src="./assets/costumes-319462_1920.jpg" alt="Costumes">
+            </div>
+            <div class="div11">
+                <img src="./assets/seiji-seiji-iyYMqhLwDQE-unsplash.jpg" alt="Seiji Seiji">
+            </div>
+        </div>
+
+        <div class="instagram-mob">
+            <div class="image-container" id="img02">
+                <img src="./assets/alpaca-3416844_1920.jpg" alt="Alpaca">
+            </div>
+            <div class="image-container" id="img03">
+                <img src="./assets/eduardo-garcia-cRHwRTXodcw-unsplash.jpg" alt="Eduardo Garcia">
+            </div>
+            <div class="image-container" id="img04">
+                <img src="./assets/alexander-schimmeck-R5IxlpyynrI-unsplash.jpg" alt="Alexander Schimmeck">
+            </div>
+            <div class="image-container" id="img05">
+                <img src="./assets/alpaca-4357188_1920.jpg" alt="Alpaca">
+            </div>
+            <div class="image-container" id="img06">
+                <img src="./assets/arequipa-4484913_1920.jpg" alt="Arequipa">
+            </div>
+            <div class="image-container" id="img07">
+                <img src="./assets/carnival-319515_1920.jpg" alt="Carnival">
+            </div>
+            <div class="image-container" id="img08">
+                <img src="./assets/christ-1809774_1920.jpg" alt="Christ">
+            </div>
+            <div class="image-container" id="img09">
+                <img src="./assets/costumes-319462_1920.jpg" alt="Costumes">
+            </div>
+            <div class="image-container" id="img10">
+                <img src="./assets/girl-864268_1920.jpg" alt="Girl">
+            </div>
+            <div class="image-container" id="img11">
+                <img src="./assets/stages-43268_1920.jpg" alt="Stages">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="container-links">
+            <div class="f-logo">
+                <img src="./assets/peru-symbol-white.png" alt="Peru Logo">
+            </div>
+            <div class="f-social">
+                <img src="./assets/instagram.svg" alt="Instagram">
+                <img src="./assets/facebook.svg" alt="Facebook">
+            </div>
+        </div>
+        <div class="f-text">
+            <p>© 2025 All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
